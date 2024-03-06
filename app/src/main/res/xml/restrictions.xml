@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<restrictions xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <restriction
+        android:key="auto_deny"
+        android:title="Deny if not listed"
+        android:restrictionType="bool"
+        android:defaultValue="false" />
+
+    <restriction
+        android:key="cert_mapping"
+        android:restrictionType="bundle_array"
+        android:title="Certificate mapping">
+        <restriction
+            android:key="mapping"
+            android:restrictionType="bundle"
+            android:title="Test">
+            <restriction
+                android:key="appid"
+                android:restrictionType="string"
+                android:title="Application ID"/>
+
+            <restriction
+                android:key="uri"
+                android:restrictionType="string"
+                android:defaultValue="*"
+                android:title="URI"/>
+
+            <restriction
+                android:key="certalias"
+                android:restrictionType="string"
+                android:title="Certificate Alias"/>
+
+        </restriction>
+    </restriction>
+
+</restrictions>
